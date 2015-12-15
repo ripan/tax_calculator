@@ -45,5 +45,11 @@ describe("Person", function() {
       }).toThrowError("income must be greater then 0");
     });
   });
+
+  describe("without income", function() {
+    it("should pay £0 tax", function() {
+      expect(person.tax()).toEqual(0);
+    });
+  });
   
 });
