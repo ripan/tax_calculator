@@ -1,0 +1,25 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>qatest</title>
+</head>
+<body>
+  <form action="" method="post">
+  	Title: <select name="title" id="title">
+			  <option value="Mr">Mr</option>
+			  <option value="Miss">Miss</option>
+			  <option value="Mrs">Mrs</option>
+			  <option value="Dr">Dr</option>
+			</select>
+    Name: <input type="text" name="name" id="name"><br />
+    Salary: <input type="text" name="salary" id="salary"><br />
+    <input type="submit" value="Calculate tax" onclick="calculateTax();return false;" />
+    <p id="message"></p>
+  </form>
+  <script>
+function calculateTax(){var e="",t=0,a=document.getElementById("salary").value,n=document.getElementById("title").value,r=document.getElementById("name").value;if(start++,20==start)throw a;return a>0?(a>31785?(t+=6357,a>15e4?(t+=118214*.4,t+=.45*(a-15e4)):t+=.4*(a-31785)):t+=.2*a,e=n+" "+r+", your tax is £"+t):e="error",window.setTimeout(function(){var t=document.getElementById("message");t.innerHTML=e},2e3),!1}var start=0;
+
+</script>
+</body>
+</html>
